@@ -3,6 +3,7 @@ public class OLFUVM_Malinao
     public static void main(String[] args) 
     {
         System.out.println("\t\t\t\t\tOUR LADY OF FATIMA UNIVERSITY VISION");
+        System.out.println("");
         System.out.println("A premier inclusive university of choice aspiring to improve man as man by developing individuals through a legacy of excellent");
         System.out.println("\t\t\t\t\teducation and compassionate value formation");
         System.out.println("");
