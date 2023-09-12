@@ -1,6 +1,6 @@
 public class OLFUVM_Malinao
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         System.out.println("\t\t\t\t\tOUR LADY OF FATIMA UNIVERSITY VISION");
         System.out.println("");
