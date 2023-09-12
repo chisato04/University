@@ -1,6 +1,6 @@
 # University Programming Files
 
-These are my university programming files. They are for **educational purposes only** and should not be used for any other purpose.
+These are my college programming files. They are for **educational purposes only** and should not be used for any other purpose.
 
 ## Disclaimer
 
