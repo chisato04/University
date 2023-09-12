@@ -1,4 +1,4 @@
-# University Programming Files
+# College Programming Files
 
 These are my college programming files. They are for **educational purposes only** and should not be used for any other purpose.
 
