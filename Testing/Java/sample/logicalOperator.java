@@ -5,14 +5,15 @@ public class logicalOperator {
         int grade;
         String status="";
 
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Enter grade: ");
-        grade = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter grade: ");
+            grade = input.nextInt();
+        }
 
         status = (grade >= 75?"Pass":"Fail");
 
         System.out.println(status);
+        scanner.close();
     }
     
 }

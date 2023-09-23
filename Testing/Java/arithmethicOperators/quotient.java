@@ -15,5 +15,6 @@ public class quotient
         float quo = num1 / num2;
 
         System.out.print(String.format("Quotient: %.2f", quo));
+        scanner.close();
     }
 }
