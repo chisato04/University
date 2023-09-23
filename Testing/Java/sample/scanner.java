@@ -14,4 +14,7 @@ public class scanner{
 
         System.out.print("Your name is " + name + " and you are " + age + " years old\n");
     }
+
+    public static void close() {
+    }
 }
