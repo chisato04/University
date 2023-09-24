@@ -13,7 +13,7 @@ int main()
     printf("Enter quiz 3 score: ");
     scanf("%lf", &quiz3);
 
-    sum = quiz1+ quiz2 + quiz3;
+    sum = quiz1 + quiz2 + quiz3;
     average = sum/3;
 
     printf("Average: %.2lf", average);
