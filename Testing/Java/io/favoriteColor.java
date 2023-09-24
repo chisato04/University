@@ -8,7 +8,7 @@ public class favoriteColor
 
             System.out.print("Enter your favorite color: ");
             String color = scanner.nextLine();
-            System.out.print("Your favorite color is " + color + ". That's a great choice!");
+            System.out.println("Your favorite color is " + color + ". That's a great choice!");
 
             scanner.close();
         }
