@@ -104,3 +104,17 @@ int size;
 	printf("Sorted array is\n");
 	printArray(arr, N);
 }
+
+//PRE-DEFINED
+/*
+int main()
+{
+    int arr[] = { 12, 11, 13, 5, 6, 7 };
+    int N = sizeof(arr) / sizeof(arr[0]);
+ 
+    // Function call
+    heapSort(arr, N);
+    printf("Sorted array is\n");
+    printArray(arr, N);
+}
+*/

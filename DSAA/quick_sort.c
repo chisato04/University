@@ -88,3 +88,21 @@ int main() {
     printf("Sorted array in ascending order: \n");
     printArray(arr, n);
 }
+
+//PRE-DEFINED
+/*
+int main() {
+  int arr[] = {8, 7, 2, 1, 0, 9, 6};
+  
+  int n = sizeof(arr) / sizeof(arr[0]);
+  
+  printf("Unsorted Array\n");
+  printArray(arr, n);
+  
+  // perform quicksort on arr
+  quickSort(arr, 0, n - 1);
+  
+  printf("Sorted array in ascending order: \n");
+  printArray(arr, n);
+}
+*/
