@@ -57,24 +57,34 @@ void quickSort(int array[], int low, int high) {
 
 // function to print array elements
 void printArray(int array[], int size) {
-  for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < size; ++i) {
     printf("%d  ", array[i]);
   }
-  printf("\n");
+    printf("\n");
 }
 
 // main function
 int main() {
-  int data[] = {8, 7, 2, 1, 0, 9, 6};
+
+    int size;
+
+    printf("enter array size: ");
+    scanf("%d", &size);
+
+    int arr[size];
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    for(int i=0; i < size; i++){
+		printf("Enter numbers[%d]: ", i);
+		scanf("%d", &arr[i]);
+	}
   
-  int n = sizeof(data) / sizeof(data[0]);
+    printf("Unsorted Array\n");
+    printArray(arr, n);
   
-  printf("Unsorted Array\n");
-  printArray(data, n);
+  // perform quicksort on arr
+    quickSort(arr, 0, n - 1);
   
-  // perform quicksort on data
-  quickSort(data, 0, n - 1);
-  
-  printf("Sorted array in ascending order: \n");
-  printArray(data, n);
+    printf("Sorted array in ascending order: \n");
+    printArray(arr, n);
 }

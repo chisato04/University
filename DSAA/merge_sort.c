@@ -1,4 +1,4 @@
-// C program for Merge Sort 
+//Merge Sort 
 #include <stdio.h> 
 #include <stdlib.h> 
   
@@ -77,8 +77,7 @@ void mergeSort(int arr[], int l, int r)
         merge(arr, l, m, r); 
     } 
 } 
-  
-// UTILITY FUNCTIONS 
+
 // Function to print an array 
 void printArray(int A[], int size) 
 { 
@@ -91,8 +90,19 @@ void printArray(int A[], int size)
 // Driver code 
 int main() 
 { 
-    int arr[] = { 12, 11, 13, 5, 6, 7 }; 
+
+int size;
+
+    printf("enter array size: ");
+    scanf("%d", &size);
+
+    int arr[size]; 
     int arr_size = sizeof(arr) / sizeof(arr[0]); 
+
+    for(int i=0; i < size; i++){
+		printf("Enter numbers[%d]: ", i);
+		scanf("%d", &arr[i]);
+	}
   
     printf("Given array is \n"); 
     printArray(arr, arr_size); 

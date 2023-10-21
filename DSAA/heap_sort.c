@@ -85,8 +85,19 @@ void printArray(int arr[], int N)
 // Driver's code
 int main()
 {
-	int arr[] = { 12, 11, 13, 5, 6, 7 };
+
+int size;
+
+    printf("enter array size: ");
+    scanf("%d", &size);
+
+	int arr[size];
 	int N = sizeof(arr) / sizeof(arr[0]);
+
+    for(int i=0; i < size; i++){
+		printf("Enter numbers[%d]: ", i);
+		scanf("%d", &arr[i]);
+	}
 
 	// Function call
 	heapSort(arr, N);
