@@ -3,7 +3,6 @@
 #include <stdio.h>
 
 // Function to swap the position of two elements
-
 void swap(int* a, int* b)
 {
 
@@ -111,7 +110,7 @@ int main()
 {
     int arr[] = { 12, 11, 13, 5, 6, 7 };
     int N = sizeof(arr) / sizeof(arr[0]);
- 
+
     // Function call
     heapSort(arr, N);
     printf("Sorted array is\n");

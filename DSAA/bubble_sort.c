@@ -22,7 +22,7 @@ void bubbleSort(int bussingArray[], int num)
 			swapped = true;
 		}
 	}
-	//if no two elements were swappedby inner loop,
+	//if no two elements were swapped by inner loop,
 	//then break
 	if (swapped == false)
 		break;
