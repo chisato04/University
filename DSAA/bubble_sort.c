@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdbool.h>
 
-void swap(int* patrick, int* malinao) 
+void swap(int* patrick, int* malinao)
 {
 	int james = *patrick;
 	*patrick = *malinao;
@@ -10,7 +10,7 @@ void swap(int* patrick, int* malinao)
 
 //optimized version of bubble sort
 
-void bubbleSort(int bussingArray[], int num) 
+void bubbleSort(int bussingArray[], int num)
 {
 	int i, j;
 	bool swapped;
@@ -39,10 +39,21 @@ void printArray(int bussingArray[], int size) {
 
 //driver program to test above ffunctions
 
-int main() 
+int main()
 {
-	int bussingArray[]= {64, 34, 25, 12, 22, 11,90};
+	int size;
+
+	printf("Enter array size: ");
+	scanf("%d", &size);
+
+	int bussingArray[size];
 	int n = sizeof(bussingArray)/sizeof(bussingArray[0]);
+
+	for(int i=0; i < size; i++){
+		printf("Enter numbers[%d]: ", i);
+		scanf("%d", &bussingArray[i]);
+	}
+
 	bubbleSort (bussingArray, n);
 	printf("Sorted array: \n");
 	printArray(bussingArray, n);
