@@ -46,7 +46,7 @@
                     <?php
                         } else {
                             echo '<img id=iframe src="images/animations/barren.gif" allowFullScreen />';
-                            echo '<p class="empty-cart-message sans-serif">Looks like your cart is empty.<br /> <a href="0-shop.php"> You can <span>browse our shop</span> to fill it back up.</a></p>';
+                            echo '<p class="empty-cart-message sans-serif">Looks like your cart is empty...<br /> <a href="0-shop.php"> You can <span>browse our shop</span> to fill it back up</a></p>';
                         }
                     ?>   
                 </div>

@@ -2,7 +2,6 @@
     <html>
         <head>
             <title>About | Luxuria</title>
-            <link rel="icon" type='image/x-icon' href='images/x_logo_black.svg' />
             <link rel="stylesheet" type=text/css href="styles/styles.css" />
             <?php include "google-fonts.php" ?>
         </head>
@@ -23,17 +22,17 @@
                     <img src='images/tempAboutOurStory-pexels-fomstock-com-1123982.jpg' alt='A Picture of Luxuria Headquarters' />
                     <div class='about_content sans-serif'>
                         <h1>Our Story</h1>
-                        <p><br />At Luxuria, we recognize that jewelry surpasses mere ornamentation; it serves as a mirror reflecting
-                           personal narratives, connections, and individual expression. In a world where the predominant motive
-                           for wearing jewelry is its captivating design, we go beyond mere aesthetics. Our mission is to fashion
+                        <p><br />At Luxuria, we recognize that jewelry surpasses mere ornamentation; it serves as a mirror reflecting 
+                           personal narratives, connections, and individual expression. In a world where the predominant motive 
+                           for wearing jewelry is its captivating design, we go beyond mere aesthetics. Our mission is to fashion 
                            accessories that strike a chord with the profound emotions of our clientele.<br /><br />
-                           The timeless allure of jewelry transcends the boundaries of age, race, and culture. At Luxuria,
-                           we wholeheartedly embrace this diversity, catering to individuals from all walks of life who derive
+                           The timeless allure of jewelry transcends the boundaries of age, race, and culture. At Luxuria, 
+                           we wholeheartedly embrace this diversity, catering to individuals from all walks of life who derive 
                            pleasure from the intricate world of buying and selling jewelry. Recognizing the vastness of the industry,
-                           replete with myriad styles, we understand the challenge inherent in selecting the perfect piece.
-                           Luxuria Collections is thus poised to provide a distinctive array, ensuring that you not only discover
+                           replete with myriad styles, we understand the challenge inherent in selecting the perfect piece. 
+                           Luxuria Collections is thus poised to provide a distinctive array, ensuring that you not only discover 
                            jewelry but also find a piece that harmonizes with your personal narrative.<br /><br />
-                           Embark on a journey into the realm of Luxuria Collections, where each piece is meticulously
+                           Embark on a journey into the realm of Luxuria Collections, where each piece is meticulously 
                            fashioned with passion, purpose, and a commitment to instilling in you a sense of connection, confidence,
                            and individuality.</p>
                     </div>
@@ -48,12 +47,12 @@
                                 </dd>
                                 <dt>Ethical Sourcing and Manufacturing</dt>
                                 <dd>In an industry littered with questionable business, we make sure to stay with what we believe should be standard,
-                                    and therefore, all of our items are ethically-made and ethically-sourced.
+                                    and therefore, all of our items are ethically-made and ethically-sourced. 
                                 </dd>
                                 <dt>Excellent After-Sales Service</dt>
                                 <dd>Here at Luxuria, we give it our best to make sure that you incur the maximum amount of satisfaction
                                     from your purchased product for as long as you have it. Simply head to your nearest Luxuria store and
-                                    we'll get your issues resolved in no time or contact us, and we'll get in touch with you online.
+                                    we'll get your issues resolved in no time or contact us, and we'll get in touch with you online. 
                                 </dd>
                             </dl>
                     </div>

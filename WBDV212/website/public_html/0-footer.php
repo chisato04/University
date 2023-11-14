@@ -17,14 +17,12 @@
                         <li><a href='0-index.php'>Home<a></li>
                         <li><a href='0-about.php'>About<a></li>
                         <li><a href='0-shop.php'>Shop<a></li>
-                        <li><a href=''>Showcase<a></li>
+                        <li><a href='0-showcase.php'>Showcase<a></li>
                         <li><a href='0-faq.php'>FAQ<a></li>
                     </ul>
                     <ul class='footer_col'>
                         <h2>Contact Us</h2>
-                        <li><a href=''>Instant Support<a></li>
-                        <li><a href=''>Feedback<a></li>
-                        <li><a href=''>Staff<a></li>
+                        <li><a href='0-contact.php'>Contacts<a></li>
                     </ul>
                     <ul class='footer_col'>
                         <h2>Website Authors</h2>

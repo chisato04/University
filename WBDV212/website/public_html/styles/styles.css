@@ -227,8 +227,6 @@ nav ul a li:hover::after{
 
 #top{
     display: block;
-    align-items: center;
-    justify-content: center;
     background-color: whitesmoke;
     padding: 20px;
     margin: 0;
@@ -653,7 +651,7 @@ nav ul a li:hover::after{
     align-items: center;
     width: 100%;
     min-height: 8vh;
-    max-height: auto;
+    max-height: 12vh;
     margin: 0;
     padding: 10px 30px 10px 70px;
     border-bottom: 1px solid #483C32;
@@ -743,14 +741,17 @@ nav ul a li:hover::after{
     font-family: 'Be Vietnam Pro', 'Roboto', 'Helvetica', sans-serif;
     border-radius: 5px;
     overflow: hidden;
+    /* border: 1px solid red; */
     /* border: 1px solid yellow; */
 }
 
 .product img{
+    flex-grow: 2; /*this fixed issue with formatting, contents would not fill the product card*/
     background: white;
     width: 100%;
-    height: max-content;
     margin-bottom: 10px;
+    overflow: hidden;
+    /* border: 1px solid blue; */
 }
 
 .product-details{ /*handles the text inside the product_card*/
@@ -779,6 +780,7 @@ nav ul a li:hover::after{
 .product-description{
     display: -webkit-box;
     margin-bottom: 20px !important;
+    min-height: 3.75em; /*this is important because it helps maintain control of flex grow even if there are not two lines on product-details id*/
     overflow: hidden;
     text-overflow: ellipsis; 
     -webkit-line-clamp: 2;
@@ -1283,8 +1285,8 @@ footer ul li, footer ul li a{
 /************************** FAQ PAGE **************************/
 
 #faq{
-    font-family: Roboto, "Be Vietnam Pro",  Helvetica, sans-serif;
-    padding: 5vh 12vw;
+    font-family: "Be Vietnam Pro", 'Roboto', Helvetica, sans-serif;
+    padding: 8vh 12vw;
   }
 
   .faq_item {
@@ -1299,6 +1301,88 @@ footer ul li, footer ul li a{
   }
 
   .faq_answer {
+    line-height: 1.75em;
     color: #666;
     font-size: 16px;
   }
+
+/************************** SHOWCASE PAGE **************************/
+
+#showcase_wrapper {
+    padding: 0vh 12vw;
+}
+
+#showcase_wrapper h1{
+    font-family: 'Playfair Display';
+    font-size: 48px;
+}
+
+.gallery-image {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Be Vietnam Pro', 'Roboto', 'Helvetica', sans-serif;
+}
+
+.gallery-image img {
+  height: auto;
+  width: 100%;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+
+.img-box {
+  box-sizing: content-box;
+  margin: 10px;
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+}
+
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 250px;
+  width: 350px;
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box:hover img { 
+  transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
+}
