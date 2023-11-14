@@ -1,14 +1,7 @@
-@font-face {
-    font-family: "Made Tommy"; /*may need replacing due to usage rights*/
-    src: url(https://halili123.000webhostapp.com/fonts/made-tommy.otf) format('opentype')
-        url(https://halili123.000webhostapp.com/fonts/made-tommy.ttf) format('truetype'),
-        url(https://halili123.000webhostapp.com/fonts/made-tommy.woff) format('woff');
-}
-
 :root{
     
-    --primary-color:  #4eb8d4;
-    --primary-font: "Made Tommy";
+    --primary-color:  black;/*#DC8686;*/
+    --primary-font: 'Playfair Display', serif;
     --primary-font-color: #898989;
     --secondary-font-color: #6cc6cd;
     
@@ -18,44 +11,107 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
+.home_icon{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 25px;
+    height: 25px;
+}
+
+.home_icon:hover{
+    transform: translateX(0);
+    animation: horizontal-shake 0.15s linear;
+}
+
+@keyframes horizontal-shake{
+    0% { transform: translateX(0) }
+    25% { transform: translateX(2px) }
+    50% { transform: translateX(-2px) }
+    75% { transform: translateX(2px) }
+    100% { transform: translateX(0) }
+}
+
 body{
-    /* background-color: var(--primary-color);
-    background-image:  */
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-color: black;
+    background-image: linear-gradient(180deg, #DC8686 0%, rgba(220, 134, 134, 0) 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
 }
 
-#sign-up {
+#sign_block_container{
+    display: flex;
+    flex-direction: row;
+    background: transparent;
     position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+#image_container{
+    flex-grow: 1.25;
+    z-index: 0;
+    width: 45vw;
+    height: 100vh;
+    background-image: url(../images/pexels-the-glorious-studio-11504786\ 1.png);
+    background-repeat: no-repeat;
+}   
+
+#image_container_2{
+    z-index: 0;
+    width: 45vw;
+    height: 100vh;
+    background-image: url(../images/pexels-the-glorious-studio-11504787\ 1.png);
+    background-repeat: no-repeat;
+}   
+
+#divider{
+    z-index: 999;
+    position: relative;
+    float: right;
+    display: flex;
+    align-items: center;
+    background: white;
+    width: 55vw;
+    height: 100vh;
+    margin-top: 0;
+    border: none;
+    /* border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px; */
+    box-shadow: -1px 0px 10px 5px black;
+    overflow-y: auto;
+}
+
+#sign-up {
     display: flex;
     flex-direction: column;
-    /* float: right;
-    margin: 170px auto 0 0;
-    margin-right: 250px; */
-    margin: 100px auto 50px auto;
+    flex-wrap: wrap;
+    margin: -100px auto 0 auto;
     padding: 48px 41px 0px 41px !important; /*EDITED: padding-top: 68px*/
-    background: #FFFFFF;
+    background: transparent;
     width: 28em; /*EDITED: 31.4em */
     height: auto; /*EDITED: 50em */
     border-radius: 20px;
-    box-shadow: 12px 10px 0px rgb(220, 230, 238), 22px 20px 0px rgb(180, 212, 229); /*CHECK FIGMA FOR ORIGINAL BOX-SHADOW COLOR*/
     font-family: Roboto, Helvetica, sans-serif;
     font-size: 16px;
 }
 
+
 h1 {
     display: block;
     width: 100%;
-    font-family: "Be Vietnam Pro", "Roboto", sans-serif;
-    font-size: 2.5em;
     margin: 0 auto 30px auto; /*EDITED: padding-top: 30px padding-top: 36px;*/
     padding: 0; 
-    text-align: center;
-    font-weight: normal;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 2.5em;
+    text-align: left;
 }
 
 fieldset, legend {
@@ -74,17 +130,13 @@ a:hover{
 }
 
 p{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
-}
-
-#create{
-    float: left;
-    text-decoration: none;
-}
-
-#forgot_pass{ 
-    float: right;
 }
 
 input:active{
@@ -158,12 +210,13 @@ input[type=password]{
     padding: 16px 15px 18px 15px !important;
     width: 100%;
     height: 49px !important;
-    background-color: var(--primary-color);
+    background-color: black;
     border: none;
     border-radius: 5px;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     color: white;
+    cursor: pointer;
     /*animation: steps;*/
 }
 
@@ -181,6 +234,7 @@ input[type=password]{
 }
 
 #switch_to{
+    display: inline-block;
     margin-top: -10px;
     margin-bottom: 50px;
     width: 100%;
@@ -195,23 +249,32 @@ input[type=password]{
     text-decoration: underline;
 }
 
-#err_alert {
-    z-index: -1;
+
+.alert{
+    z-index: 1;
     position: absolute;
-    margin-left: 842.75px;
-    padding-top: 15px;
-    width: 28em;
-    height: 4.5em;
-    background: rgb(253, 175, 175);
-    border: 3px solid rgb(248, 96, 96);
+    top: -50px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 12px 0;
+    width: 31.55em; /*EDITED: width: 27.6em; USE IF FONT-SIZE IS CHANGED TO 16px*/
+    height: 3em;
+    background: rgba(2, 235, 84, 0.2);
     border-radius: 5px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 14px;
     text-align: center;
-    animation: peek 6s ease-in-out forwards;
+    opacity: 0%;
+    animation: reveal 7s ease-in-out forwards;
 }
 
-@keyframes peek {
-    0%{opacity: 0%; transform: translateY(0px);}
-    25%, 50%, 75%{opacity: 100%; transform: translateY(-50px)}
-    100%{opacity: 0%; transform: translateY(0px);}
-}
+    @keyframes reveal{
+        0%{opacity: 0%; transform: translateY(0px)}
+        5%, 50%, 95%{opacity: 100%; transform: translateY(100px)}
+        100%{opacity: 0%; transform: translateY(0px)}
+    }

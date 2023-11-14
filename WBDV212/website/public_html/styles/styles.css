@@ -1,0 +1,1304 @@
+*{
+    box-sizing: border-box;
+}
+
+*::selection{
+    background: rgba(0, 0, 0, 0.50);
+    color: white;
+}
+
+:root{
+    --body-color: rgba(249, 251, 255, 1);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.home_icon{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    scale: 0.35;
+}
+
+.home_icon:hover{
+    transform: translateX(0);
+    animation: horizontal-shake 0.25s linear;
+}
+
+.no_pad{
+    padding: 0;
+}
+
+.no_margin{
+    margin: 0;
+}
+
+.sans-serif{
+    font-family: 'Be Vietnam Pro', 'Roboto', 'Helvetica', 'sans-serif ';
+}
+
+
+.title_block{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 100px;
+    background: whitesmoke;
+}
+
+    .title_block h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 96px;
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+    }
+
+    .title_block p{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 50%;
+        margin-top: 40px;
+    }
+
+    .title_block form{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 50%;
+        margin-top: 40px;
+        font-family: 'Be Vietnam Pro', Roboto, sans-serif;
+        font-size: 16px;
+    }
+
+.sticky_nav{
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 10vh;
+    max-height: auto;
+    padding: 0 12vw;
+    margin: 0;
+    line-height: 3em;
+    background: whitesmoke;
+    border-bottom: 1px solid #483C32;
+}
+
+
+@keyframes horizontal-shake{
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: auto;
+    background-color: rgba(249, 251, 255, 1);
+}
+
+article{
+    flex: 1; /*lets the article fill the space between header and footer*/
+}
+
+/************************** HEADER SECTION **************************/
+
+header{
+    z-index: 9999;
+    display: flex;
+    /*adds space between all divs inside the flex container, in this case one on flex start, one center, and one flex end*/
+    flex-direction: row;
+    flex-wrap: wrap;    
+    align-items: center;
+    background: rgba(249, 251, 255, 1);
+    padding: 5px 10px;
+    width: 100%;
+    min-height: 8.5vh;
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+#header_logo{
+    padding: 0;
+    margin: 10px;
+    margin-left: 20px;
+    scale: 0.85;
+}
+
+nav{
+    margin: 0 auto 0 0;
+    display: inline-block;
+    font-family: 'Be Vietnam Pro', Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul a{
+    margin-right: 3em;
+}
+
+nav ul a li{
+    position: relative;
+    display: inline-block; 
+    /*the display has to be in some form of block (here, inline-block), otherwise the after pseudoelementwill not work*/
+    line-height: 3em;
+}
+
+nav ul a li::after{
+    content: '';
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #483C32;
+    transition-property: width;
+    transition-duration: 0.25s; 
+    transition-timing-function: ease-in-out;
+    margin-top: -0.8em;
+}
+
+nav ul a li:hover::after{
+    width: 100%;
+}
+
+#nav_last{
+    margin: 0;
+}
+
+#icon_nav{
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    height: 3.6em;
+}
+
+.icon_nav_icon{
+    scale: 0.3;
+}
+
+.profile{
+    margin-right: -20px;
+}
+
+#header_signup_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    margin-right: 20px;
+    width: 9.9375em;
+    height: 2.9375em;
+    border-radius: 20px;
+    color: white;
+    font-family: Roboto, "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/************************** LANDING PAGE **************************/
+
+#top{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: 0;
+    color: black;
+    font-family: 'Be Vietnam Pro', Roboto, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 0 10px 15px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 0 0 40px;
+    background: black;
+    background-image: url(../images/pexels-airam-datoon-13524234.jpg);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 54%;
+    opacity: 1;
+    min-width: 100%;
+    max-width: auto;
+    min-height: 84.5vh;
+    max-height: auto;
+    box-shadow: 0 0 200px 100px rgba(0,0,0,0.9) inset; /*we are using this as a vignette*/
+}
+
+#main > *{ 
+    opacity: 0.75;
+}
+
+#main img{
+    margin: 40px 0 0 0;
+    width: 20vw;
+    height: auto;
+}
+
+#main p, #main a, #main h1{
+    padding: 0 0 0 18px;
+    font-family: "Be Vietnam Pro", Roboto, Arial, Helvetica, sans-serif !important;
+    line-height: 2em;
+    color: white;
+    font-weight: 300;
+}
+
+#main h1{
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+#main p, #main a{
+    display: inline;
+    margin-bottom: 0;
+    height: auto;
+    font-size: 16px;
+}
+
+#main a{
+    padding: 0; 
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+#main span{
+    margin-top: 50px;
+}
+
+.more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+    left: 0; /*important to set left and right at 0 first before setting auto on horizontal margins*/
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.165);
+    opacity: 0.5;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Be Vietnam Pro', 'Roboto', 'Helvetica', sans-serif;
+    border-radius: 25px;
+}
+
+.home_heading{
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+#nav_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background: rgba(249, 251, 255, 1); */
+    background: whitesmoke;
+    padding: 50px 12vw 100px 12vw;
+    min-width: 100%;
+    max-width: auto;
+    min-height: 48vh; /*EDITED: 42vh, ACCOUNTING FOR DETAILS TAG*/
+    max-height: auto;
+}
+
+#nav_container h1{
+    margin: 30px 0 25px 0;
+}
+
+#nav_box_wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav_box{
+    color: black;
+    padding: 0;
+    margin: 0 0 40px 0;
+    width: 22em;
+    height: 20em;
+}
+
+.nav_box h2{
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 8px !important;
+    font-family: 'Be Vietnam Pro', 'Playfair Display', sans-serif, serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: black;
+}
+
+.nav_box p{
+    padding: 0;
+    min-height: 8em;
+    font-family: 'Be Vietnam Pro', Roboto, serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.75em;
+}
+
+.nav_box_button{
+    display: block;
+    padding: 12px;
+    background: black;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(249, 251, 255, 1);
+    border-radius: 5px;
+}
+
+.nav_box_button:hover{
+    opacity: 0.75;
+}
+
+
+#main_content_box{
+    display: block;
+    background-color: var(--body-color);
+    width: 100%;
+    max-width: auto;
+    min-height: 100vh; /*used both min-height and max-height so that the div is flexible when zooming*/
+    max-height: auto;
+    padding: 6vh 12vw; /*EDITED: 80px 250px*/ /*EDITED: 50px*/
+}
+
+#featured{
+    height: auto;
+}
+
+#featured_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: auto;
+}
+
+.product_card{
+    display: flex;
+    flex-direction: column;
+    width: 22vw;
+    height: auto;
+}
+
+.product_card img{
+    background: white;
+    width: 100%;
+    height: 20vw;
+}
+
+.featured_content{ /*handles the text inside the product_card*/
+    width: 100%;   
+    margin-top: 10px;
+}
+
+.product_card h2{
+    height: 25px;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.product_card p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75em;
+}
+
+#description{
+    display: -webkit-box;
+    min-height: 50px;
+    max-height: 50px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.price{
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.product_card a{
+    display: block;
+    padding: 12px;
+    margin-top: auto;
+    background: black;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(249, 251, 255, 1);
+    border-radius: 5px;
+}
+
+#awards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    max-height: auto;
+    padding: 0 12vw;
+    background: whitesmoke;
+}
+
+#awards img{
+    min-height: 50%;
+    max-height: 50%;
+}
+
+/************************** ABOUT PAGE **************************/
+
+
+#about_page .title_block{
+    margin-bottom: -1.5em;
+}
+
+#about_page div{
+    width: 100%;
+    height: auto;
+}
+
+.about_content, .about_content_mv{
+    padding: 40px 50px;
+    line-height: 2em;
+}
+
+.about_content h1, .about_content_mv h1{
+    padding: 0;
+    margin: 0 0 30px 0;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.25em;
+}
+
+.about_content p, .about_content_mv p, .about_content dl{
+    padding: 0;
+    margin: 0;
+    padding-left: 5px;
+}
+
+#our_story{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 70px 12vw;
+}
+
+    #our_story .about_content{
+        max-width: 70%;
+    }
+
+    #our_story img{
+        display: inline-block;
+        width: 379.6px;
+        height: 569.4px;
+    }
+
+#deliver{
+    display: flex;    
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+    max-height: auto !important;
+    padding: 0 12vw;
+}
+
+#deliver .about_content{
+    flex-grow: 1;
+    min-width: 30vw;
+    width: 30vw;
+    max-width: auto;
+    padding-left: 0;
+}
+
+    dl{
+        display: inline-block;
+        margin-top: 1em !important;
+    }
+
+    dt{
+        margin-bottom: 1em;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    dd{
+        font-size: 16px;
+        margin-bottom: 2em;
+        margin-left: 0;
+    }
+
+    #deliver_image_container{
+        width: 65vh !important;
+        height: 65vh !important;
+        background: url(../images/deliver-squaredAR-pexels-tima-miroshnichenko-6263143\ 1.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+    }
+
+#mission, #vision{
+    min-height: 50vh;
+    max-height: auto;
+    background-color: whitesmoke;
+    padding: 0 9%;
+}
+
+#mission, #vision, .mission_vision{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mission_vision{
+    margin-top: 50px;
+    text-align: center;
+}
+
+    .mission_vision p{
+        display: inline;
+        margin: 0 0 100px 0;
+        font-size: 24px;
+        line-height: 2em;
+    }
+
+        .quote, .quote_end{
+            position: absolute;
+            display: inline-block;
+            font-family: 'Playfair Display';
+            font-weight: 700;
+            font-style: italic;
+            font-size: 100px;
+        }
+
+        .quote{
+            margin-left: -70px;
+            margin-top: -5px;
+        }
+
+        .quote_end{
+            margin-bottom: 10px;
+            -moz-transform: scale(1, -1);
+            -webkit-transform: scale(1, -1);
+            -o-transform: scale(1, -1);
+            -ms-transform: scale(1, -1);
+            transform: scale(1, -1);
+        }
+
+
+/************************** SHOP PAGE **************************/
+
+
+#shop_filter{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-height: 8vh;
+    max-height: auto;
+    margin: 0;
+    padding: 10px 30px 10px 70px;
+    border-bottom: 1px solid #483C32;
+    background: whitesmoke;
+}
+
+    #shop_filter *{
+        height: 43px;
+        font-family: 'Be Vietnam Pro', 'Roboto', 'Helvetica', sans-serif;
+        color: #483C32;
+        border: none;   
+        border-bottom: 1px solid #483C32;
+        cursor: pointer;
+    }
+
+    #shop_filter div{
+        border: none;
+    }
+
+    #shop_filter select, #shop_filter input[type='number']{
+        display: inline-block;  
+        padding: 10px;
+        background: rgba(0, 0, 0, 0);
+        width: 200px;
+        margin-right: 30px;
+    }
+
+    #shop_filter select option{
+        background-color: whitesmoke;
+        color: #483C32;
+    }
+
+        #shop_filter select option:checked{
+            background: black;
+            color: white;
+        }
+
+    #shop_filter input[type='number']{
+        width: 120px;
+        margin-right: 10px;
+    }
+
+        #shop_filter input[type='number']::placeholder{
+            color: gray;
+        }
+
+    input[name='go_filter']{
+        margin-left: auto;
+        background: transparent;
+        width: 100px;
+        border: 1px solid #483C32 !important;
+    }
+
+        input[name='go_filter']:hover{
+            background: #483C32;
+            color: white !important;
+            border: 1px solid #483C32 !important;
+        }
+
+#product_page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 80px 10vw;
+    /* border: 1px solid red; */
+}
+
+#product_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    /* border: 1px solid blue; */
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    width: 18vw;
+    min-width: 300px;
+    max-height: auto;
+    margin-bottom: 80px;
+    font-family: 'Be Vietnam Pro', 'Roboto', 'Helvetica', sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    /* border: 1px solid yellow; */
+}
+
+.product img{
+    background: white;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 10px;
+}
+
+.product-details{ /*handles the text inside the product_card*/
+    width: 100%;   
+    margin-top: 10px;
+}
+
+.product-details > *:not(form){
+    margin-bottom: 10px;
+}
+
+.product-title{
+    height: 25px;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.product-description, .product-price{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75em;
+}
+
+.product-description{
+    display: -webkit-box;
+    margin-bottom: 20px !important;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.product-price{
+    font-weight: 500;
+}
+
+.product form{
+    width: 100%;
+    margin-top: auto;
+    /* border: 1px solid green; */
+}
+
+.product form button {
+    background-color: white;
+    color: black;
+    padding: 12px 15px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: 'Be Vietnam Pro', 'Roboto', 'Helvetica', sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.product form button:hover{
+    background-color: black;
+    color: whitesmoke;
+}
+
+/************************** CART PAGE **************************/
+
+#cart_article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8vh 12vw;
+}
+
+#cart_wrap{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#item_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 72%;
+    height: auto;
+    padding-top: 12px;
+}
+
+.item_card{
+    display: flex;
+    flex-direction: row;
+    min-height: 11em;
+    max-height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+.item_card img{
+    background: #483C32;
+    width: 11em;
+    height: 100%;
+}
+
+.item_content{ /*handles the text in the item card*/
+    display: flex;
+    flex-direction: column;
+    max-height: auto;
+    padding: 25px;
+}
+
+.item_content h1{
+    font-weight: 600;
+}
+
+.item_content p{
+    text-overflow: ellipsis;
+    margin-top: auto;
+}
+
+.item_card input{
+    margin: 0 50px;
+    margin-left: auto;
+}
+
+#cart_sidebar{
+    width: 25%;
+    max-height: 70vh;
+    padding: 0 25px;
+    margin: 0 0 0 auto;
+    border-left: 1px solid black;
+}
+
+#cart_sidebar h1{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.75em;
+}
+
+#cart_sidebar form{
+    width: 100%;
+}
+
+#cart_sidebar input[type='submit'], #cart_sidebar button[type='submit']{
+    padding: 10px;
+    background: black;
+    color: white;
+    width: 100%;
+    max-width: auto;
+    min-height: 6%;
+    max-height: auto;
+    margin-top: auto;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+#cart_sidebar button[type='submit']{
+    background: rgb(213, 83, 83);
+}
+
+#cart_sidebar #price_info{
+    min-height: 5em;
+    max-height: auto;
+    padding-top: 10px;
+}
+
+.empty-cart-message {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.empty-cart-message a{
+    font-size: 20px;
+}
+
+.empty-cart-message a span{
+    border-bottom: 2px solid black;
+}
+
+#iframe{
+    background: transparent;
+    width: 480px;
+    height: 220.800px;
+    margin: 0 auto 0 auto;
+    border-radius: 10px;
+}
+
+/************************** ACCOUNT PAGE **************************/
+
+#account_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    min-height: auto;
+    padding: 0 12vw;
+}
+
+#account_container h1{
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: -10px;
+    font-family: 'Playfair Display', Roboto, sans-serif;
+    color: black;
+}
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #F9FBFF;
+    width: 14.5em;
+    height: 32.125em;
+    margin: 20px 60px 20px 0;
+    padding-top: 50px;
+    border-radius: 12px;
+    color: black;
+    font-family: 'Be Vietnam Pro', Roboto, sans-serif;
+    font-weight: 500;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+#sidebar ul{
+    list-style-type: none;
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#sidebar a{
+    color: black;
+    text-decoration: none;
+}
+
+#sidebar ul li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 10px 10px 10px 25px;
+}
+
+#indicator{
+    margin-left: auto;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #6F8FAF;
+}
+
+#sidebar ul a li > *{
+    opacity: 0;
+}
+
+#sidebar ul a li:hover > *{
+    opacity: 1;
+}
+
+#sidebar ul a .active > *{
+    opacity: 1;
+}
+
+
+#sidebar p{
+    margin: 215px auto 0 auto;
+    padding: 10px;
+    padding-left: 25px;
+    width: 80%;
+    border-radius: 7px;
+}
+
+#account_main{
+    background-color: #F9FBFF;
+    width: 68.3em;
+    height: 37.5625em;
+    padding: 35px 50px;
+    color: black;
+    font-family: Roboto, sans-serif;
+}
+
+#account_main h2, #account_main h3{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    color: #797979;
+} 
+
+#account_main h2{
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+#account_main h3{
+    font-size: 14px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 37vw;
+    margin-top: 30px;
+    font-family: Roboto, sans-serif;
+    color: black;
+}
+
+label{
+    display: inline-block;
+    margin-left: 2.5px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+#gender label{
+    margin: 15px 20px 0 0;
+    font-size: 14px;
+}
+
+.row{
+    display: inline-block;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#row1, #row2, #row3, #row4{
+    margin: 0 0 25px 0;
+}
+
+#row3 p{
+    background-color: transparent;
+    margin-right: 15px; 
+}
+
+#row6{
+    display: flex;
+    justify-content: flex-end;
+}
+
+input[type=text].address{
+    width: 49em;
+}
+
+input[type=text], input[type=email], input[type=password]{
+    background-color: #E9E9E9;
+    margin-top: 5px;
+    padding: 3px 15px; 
+    padding-right: 0; 
+    width: 11.625em;
+    height: 2.25em;
+    border-radius: 3px;
+    border: none;
+    font-size: 14px;
+}
+
+input[type=radio]{
+    cursor: pointer;
+    background-color: #797979;
+    border: 1px solid #797979;
+}
+
+input[type=date]{
+    cursor: pointer;
+    background-color: #E9E9E9;
+    margin-top: 5px;
+    padding: 3px 15px; 
+    padding-right: 0; 
+    width: 11.625em;
+    height: 2.25em;
+    border-radius: 3px;
+    border: none;
+    font-family: Roboto, sans-serif;
+}
+
+#row6 input[type=submit], .accsecurity_row input[type=submit], .accmanagement_row input[type=submit]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: auto;
+    width: 188px; 
+    height: 39px !important;
+    background-color: #6F8FAF;
+    border: none;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+#row6 input[type=submit]:hover, .accsecurity_row input[type=submit]:hover, .accmanagement_row input[type=submit]:hover{
+    background-color: #6f8fafb7;
+}
+
+#acc_security_form h3, #acc_management_form h3{
+    font-size: 16px;
+}
+
+.accsecurity_row, .accmanagement_row{
+    margin: 20px 0 25px 0;
+}
+
+
+/************************** PAGE FOOTER **************************/
+
+footer{
+    background: rgba(249, 251, 255, 1);
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 45vh;
+    padding: 60px 6vw 30px 6vw;
+    font-family: "Be Vietnam Pro", Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+footer ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li, footer ul li a{
+    display: inline;
+}
+
+
+.footer_block{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer_block:nth-of-type(1){
+    flex-grow: 0.5;
+    line-height: 25px;
+}
+
+    .footer_block:nth-of-type(1) img{
+        margin: 0 auto 15px -15px !important;
+    }
+
+.footer_block:nth-of-type(2){
+    flex-grow: 1.5;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 35%;
+    height: auto;
+    padding: 44px 0 20px 0;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+    .footer_block:nth-of-type(2) h2 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+
+.footer_block:nth-of-type(3){
+    flex-grow: 1;
+    max-height: auto;
+    padding: 44px 0;
+}
+
+    .footer_block:nth-of-type(3) h1{
+        font-weight: 300 !important;
+        text-align: center;
+    }
+
+    .footer_block:nth-of-type(3) p {
+        text-align: center;
+    }
+
+    .footer_block:nth-of-type(3) a {
+        font-weight: 400;
+    }
+
+
+.footer_col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#bottom{
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0 30px;
+    margin-top: -20px;
+    background: whitesmoke;
+    width: 100%;
+    min-height: 10vh;
+    max-height: auto;
+    color: black;
+    font-family: "Be Vietnam Pro", Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#bottom p{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#bottom_hyperlinks{
+    margin-left: auto;
+}
+
+#bottom a{
+    margin-right: 1em;
+}
+
+
+/************************** FAQ PAGE **************************/
+
+#faq{
+    font-family: Roboto, "Be Vietnam Pro",  Helvetica, sans-serif;
+    padding: 5vh 12vw;
+  }
+
+  .faq_item {
+    margin-bottom: 50px;
+    max-height: auto;
+  }
+
+
+  .faq_question {
+    color: #333;
+    font-size: 18px;
+  }
+
+  .faq_answer {
+    color: #666;
+    font-size: 16px;
+  }
