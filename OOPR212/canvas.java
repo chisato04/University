@@ -15,6 +15,7 @@ public class canvas extends JFrame{
 
         this.add(panel);
         this.pack();
+        this.setTitle("Philippine Flag");
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
