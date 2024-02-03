@@ -35,4 +35,4 @@ public class panel extends JPanel
         g2.setColor(myYellow);
         g2.fillOval(40, 130, 100, 100);
     }
-}
+}// end of code

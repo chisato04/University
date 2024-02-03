@@ -1,6 +1,5 @@
 package OOPR212;
 
-import java.awt.*;
 import javax.swing.*;
 
 public class canvas extends JFrame{
@@ -22,4 +21,4 @@ public class canvas extends JFrame{
 
 
 
-}//end of code
+} //end of code
