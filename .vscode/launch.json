@@ -2,6 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "PhilippineFlag",
+      "request": "launch",
+      "mainClass": "OOPR212.PhilippineFlag",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "phFlag",
+      "request": "launch",
+      "mainClass": "OOPR212.phFlag",
+      "projectName": "University_53d539c2"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
