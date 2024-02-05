@@ -3,6 +3,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MALINAO_SwingActivity",
+      "request": "launch",
+      "mainClass": "MALINAO_SwingActivity",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "MALINAO_SwingActivity2",
+      "request": "launch",
+      "mainClass": "MALINAO_SwingActivity2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "SwingActivity2",
+      "request": "launch",
+      "mainClass": "SwingActivity2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "Activity1_Malinao",
+      "request": "launch",
+      "mainClass": "OOPR212.activity1.Activity1_Malinao",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "AWTActivity",
+      "request": "launch",
+      "mainClass": "AWTActivity",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
       "name": "PhilippineFlag",
       "request": "launch",
       "mainClass": "OOPR212.PhilippineFlag",
