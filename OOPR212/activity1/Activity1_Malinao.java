@@ -1,13 +1,12 @@
-package OOPR212;
+package OOPR212.activity1;
 
 import javax.swing.*;
 
-public class canvas extends JFrame{
-
+public class Activity1_Malinao extends JFrame{
 
     panel panel;
 
-    canvas(){
+    Activity1_Malinao(){
 
         panel = new panel();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,4 +18,7 @@ public class canvas extends JFrame{
         this.setVisible(true);
     }
 
+        public static void main(String[] args) {
+            new Activity1_Malinao();
+        }
 } //end of code
