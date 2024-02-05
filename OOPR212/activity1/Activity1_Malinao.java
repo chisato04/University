@@ -4,14 +4,14 @@ import javax.swing.*;
 
 public class Activity1_Malinao extends JFrame{
 
-    panel panel;
+    Malinao_panel frame;
 
     Activity1_Malinao(){
 
-        panel = new panel();
+        frame = new Malinao_panel();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        this.add(panel);
+        this.add(frame);
         this.pack();
         this.setTitle("Philippine Flag by Malinao");
         this.setLocationRelativeTo(null);
