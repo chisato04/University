@@ -3,6 +3,83 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MALINAO_TextField2",
+      "request": "launch",
+      "mainClass": "OOPR212.JTextArea.MALINAO_TextField2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "MALINAO_TextField1",
+      "request": "launch",
+      "mainClass": "OOPR212.JTextArea.MALINAO_TextField1",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "malinaoJTField2",
+      "request": "launch",
+      "mainClass": "OOPR212.JTField.malinaoJTField2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "malinaoJTField1",
+      "request": "launch",
+      "mainClass": "OOPR212.JTField.malinaoJTField1",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "malinaoJButton2",
+      "request": "launch",
+      "mainClass": "OOPR212.JButton.malinaoJButton2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "malinaoJButton1",
+      "request": "launch",
+      "mainClass": "OOPR212.JButton.malinaoJButton1",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "malinaoJWindowsPosition",
+      "request": "launch",
+      "mainClass": "OOPR212.JavaSwingJWindow.malinaoJWindowsPosition",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "malinaoJWindows",
+      "request": "launch",
+      "mainClass": "OOPR212.JavaSwingJWindow.malinaoJWindows",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "HelloWorld",
+      "request": "launch",
+      "mainClass": "OOPR212.JavaSwingJLabel.HelloWorld",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "HelloWorld",
+      "request": "launch",
+      "mainClass": "OOPR212.labelClass.HelloWorld",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "myFirstApp",
+      "request": "launch",
+      "mainClass": "OOPR212.labelClass.myFirstApp",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
       "name": "MALINAO_SwingActivity",
       "request": "launch",
       "mainClass": "MALINAO_SwingActivity",
