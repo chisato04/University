@@ -3,6 +3,111 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Malinao_JPanel",
+      "request": "launch",
+      "mainClass": "Malinao_JPanel",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "malinaoPanel",
+      "request": "launch",
+      "mainClass": "malinaoPanel",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "MusicPlayer",
+      "request": "launch",
+      "mainClass": "OOPR212.JList.MusicPlayer",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "jlist2",
+      "request": "launch",
+      "mainClass": "OOPR212.JList.jlist2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "jlist1",
+      "request": "launch",
+      "mainClass": "OOPR212.JList.jlist1",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "radiobutton2",
+      "request": "launch",
+      "mainClass": "OOPR212.JRadioButton.radiobutton2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "radiobutton1",
+      "request": "launch",
+      "mainClass": "OOPR212.JRadioButton.radiobutton1",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "checkbox2",
+      "request": "launch",
+      "mainClass": "OOPR212.JCheckBox.checkbox2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "checkbox1",
+      "request": "launch",
+      "mainClass": "OOPR212.JCheckBox.checkbox1",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "jcombobox2",
+      "request": "launch",
+      "mainClass": "OOPR212.JComboBox.jcombobox2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "jpass1",
+      "request": "launch",
+      "mainClass": "OOPR212.JPassword.jpass1",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "jpass2",
+      "request": "launch",
+      "mainClass": "OOPR212.JPassword.jpass2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "<unnamed_class$layouts1>",
+      "request": "launch",
+      "mainClass": "OOPR212.Layouts.<unnamed_class$layouts1>",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "layouts2",
+      "request": "launch",
+      "mainClass": "OOPR212.Layouts.layouts2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "layouts1",
+      "request": "launch",
+      "mainClass": "OOPR212.Layouts.layouts1",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
       "name": "MALINAO_TextField2",
       "request": "launch",
       "mainClass": "OOPR212.JTextArea.MALINAO_TextField2",
