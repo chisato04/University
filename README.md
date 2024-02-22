@@ -8,4 +8,4 @@ The code in this repository is not guaranteed to be bug-free or secure. It is pr
 
 ## How to Use
 
-To use the code in this repository, you will need to have a working knowledge of the programming language used. The code is well-commented, so you should be able to understand how it works.
+To use the code in this repository, you will need to have a working knowledge of the programming language used. The code is(not) well-commented.
