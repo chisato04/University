@@ -41,7 +41,7 @@ public class jpass1 extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        String text = passwordTextField.getText();
+        String text = passwordTextField.getText(); //depracated
         boolean hasSpecialChars = false;
 
         for (int i = 0; i < text.length(); i++) {
