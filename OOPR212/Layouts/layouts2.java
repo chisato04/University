@@ -1,105 +1,92 @@
-package OOPR212.Layouts;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class layouts2 extends JFrame implements ActionListener {
+public class layouts2 extends JFrame {
     private JLabel resultLabel;
     private JPanel buttonsPanel;
 
     public layouts2() {
         setTitle("Calculator");
-        setSize(300, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(400, 400);
+        setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        resultLabel = new JLabel("0", JLabel.RIGHT);
+        resultLabel = new JLabel("", SwingConstants.RIGHT);
         resultLabel.setName("resultLabel");
         add(resultLabel, BorderLayout.NORTH);
 
         buttonsPanel = new JPanel();
         buttonsPanel.setName("buttonsPanel");
-        buttonsPanel.setLayout(new GridLayout(4, 4));
+        buttonsPanel.setLayout(new GridLayout(4, 4, 5, 5));
+        addButtons();
+        add(buttonsPanel, BorderLayout.CENTER);
+    }
 
-        for (int i = 1; i <= 9; i++) {
-            JButton button = new JButton(String.valueOf(i));
-            button.setName("button" + i);
-            button.addActionListener(this);
+    private void addButtons() {
+        String[] buttonLabels = {
+                "7", "8", "9", "/",
+                "4", "5", "6", "*",
+                "1", "2", "3", "-",
+                "0", "C", "=", "+"
+        };
+
+        for (String label : buttonLabels) {
+            JButton button = new JButton(label);
+            switch (label) {
+                case "/":
+                    button.setName("divideButton");
+                    break;
+                case "*":
+                    button.setName("multiplyButton");
+                    break;
+                case "-":
+                    button.setName("subtractButton");
+                    break;
+                case "+":
+                    button.setName("addButton");
+                    break;
+                case "C":
+                    button.setName("clearButton");
+                    break;
+                case "=":
+                    button.setName("computeButton");
+                    break;
+                default:
+                    button.setName("button" + label);
+                    break;
+            }
+            button.addActionListener(new ButtonClickListener());
             buttonsPanel.add(button);
         }
-
-        JButton zeroButton = new JButton("0");
-        zeroButton.setName("zeroButton");
-        zeroButton.setName("button0");
-        zeroButton.addActionListener(this);
-        buttonsPanel.add(zeroButton);
-
-        JButton addButton = new JButton("+");
-        addButton.setName("addButton");
-        addButton.setName("addButton");
-        addButton.addActionListener(this);
-        buttonsPanel.add(addButton);
-
-        JButton subtractButton = new JButton("-");
-        subtractButton.setName("subtractButton");
-        subtractButton.setName("subtractButton");
-        subtractButton.addActionListener(this);
-        buttonsPanel.add(subtractButton);
-
-        JButton multiplyButton = new JButton("*");
-        multiplyButton.setName("multiplyButton");
-        multiplyButton.addActionListener(this);
-        buttonsPanel.add(multiplyButton);
-
-        JButton divideButton = new JButton("/");
-        divideButton.setName("divideButton");
-        divideButton.addActionListener(this);
-        buttonsPanel.add(divideButton);
-
-        JButton clearButton = new JButton("C");
-        clearButton.setName("clearButton");
-        clearButton.addActionListener(this);
-        buttonsPanel.add(clearButton);
-
-        JButton computeButton = new JButton("=");
-        computeButton.setName("computeButton");
-        computeButton.addActionListener(this);
-        buttonsPanel.add(computeButton);
-
-        add(buttonsPanel, BorderLayout.CENTER);
-
-        setVisible(true);
     }
 
-    public static void main(String[] args) {
-        new layouts2();
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        String command = e.getActionCommand();
-        String currentText = resultLabel.getText();
-
-        if (command.equals("C")) {
-            resultLabel.setText("0");
-        } else if (command.equals("=")) {
-            try {
-                String result = String.valueOf(eval(currentText));
-                resultLabel.setText(result);
-            } catch (ArithmeticException ex) {
-                resultLabel.setText("Error");
-            }
-        } else {
-            if (currentText.equals("0")) {
-                resultLabel.setText(command);
-            } else {
-                resultLabel.setText(currentText + command);
+    class ButtonClickListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String command = e.getActionCommand();
+            switch (command) {
+                case "C":
+                    resultLabel.setText("");
+                    break;
+                case "=":
+                    try {
+                        String result = evaluate(resultLabel.getText());
+                        resultLabel.setText(result);
+                    } catch (Exception ex) {
+                        resultLabel.setText("Error");
+                    }
+                    break;
+                default:
+                    resultLabel.setText(resultLabel.getText() + command);
+                    break;
             }
         }
     }
 
-    private double eval(String expression) {
+    private String evaluate(String expression) {
         return new Object() {
             int pos = -1, ch;
 
@@ -116,47 +103,56 @@ public class layouts2 extends JFrame implements ActionListener {
                 return false;
             }
 
-            double parse() {
+            String parse() {
                 nextChar();
                 double x = parseExpression();
-                if (pos < expression.length()) throw new RuntimeException("Unexpected: " + (char) ch);
-                return x;
+                if (pos < expression.length()) throw new RuntimeException("Unexpected: " + (char)ch);
+                return String.valueOf((int)x);
             }
 
             double parseExpression() {
                 double x = parseTerm();
-                for (; ; ) {
-                    if (eat('+')) x += parseTerm(); // Addition
-                    else if (eat('-')) x -= parseTerm(); // Subtraction
+                for (;;) {
+                    if (eat('+')) x += parseTerm(); // addition
+                    else if (eat('-')) x -= parseTerm(); // subtraction
                     else return x;
                 }
             }
 
             double parseTerm() {
                 double x = parseFactor();
-                for (; ; ) {
-                    if (eat('*')) x *= parseFactor(); // Multiplication
-                    else if (eat('/')) x /= parseFactor(); // Division
+                for (;;) {
+                    if (eat('*')) x *= parseFactor(); // multiplication
+                    else if (eat('/')) x /= parseFactor(); // division
                     else return x;
                 }
             }
 
             double parseFactor() {
-                if (eat('+')) return parseFactor(); // Unary plus
-                if (eat('-')) return -parseFactor(); // Unary minus
+                if (eat('+')) return parseFactor(); // unary plus
+                if (eat('-')) return -parseFactor(); // unary minus
+
                 double x;
                 int startPos = this.pos;
-                if (eat('(')) { // Parentheses
+                if (eat('(')) { // parentheses
                     x = parseExpression();
                     eat(')');
-                } else if ((ch >= '0' && ch <= '9') || ch == '.') { // Numbers
+                } else if ((ch >= '0' && ch <= '9') || ch == '.') { // numbers
                     while ((ch >= '0' && ch <= '9') || ch == '.') nextChar();
                     x = Double.parseDouble(expression.substring(startPos, this.pos));
                 } else {
-                    throw new RuntimeException("Unexpected: " + (char) ch);
+                    throw new RuntimeException("Unexpected: " + (char)ch);
                 }
+
                 return x;
             }
         }.parse();
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            layouts2 frame = new layouts2();
+            frame.setVisible(true);
+        });
     }
 }

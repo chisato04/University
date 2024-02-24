@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "layouts2",
+      "request": "launch",
+      "mainClass": "layouts2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "layouts1",
+      "request": "launch",
+      "mainClass": "layouts1",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
       "name": "Malinao_JPanel",
       "request": "launch",
       "mainClass": "Malinao_JPanel",
