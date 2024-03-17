@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "eventListener2",
+      "request": "launch",
+      "mainClass": "OOPR212.JavaSwingEventListeners.eventListener2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "TextLengthChecker",
+      "request": "launch",
+      "mainClass": "OOPR212.JavaSwingEventListeners.TextLengthChecker",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
       "name": "eventClass1",
       "request": "launch",
       "mainClass": "OOPR212.JavaSwingEventClasses.eventClass1",
