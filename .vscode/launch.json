@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "eventAdapters2",
+      "request": "launch",
+      "mainClass": "OOPR212.JavaSwingEventAdapters.eventAdapters2",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "eventAdapters1s",
+      "request": "launch",
+      "mainClass": "OOPR212.JavaSwingEventAdapters.eventAdapters1s",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
       "name": "eventListener2",
       "request": "launch",
       "mainClass": "OOPR212.JavaSwingEventListeners.eventListener2",
