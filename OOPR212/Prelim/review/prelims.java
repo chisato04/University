@@ -11,7 +11,7 @@ public class prelims {
 
 	public static void main(String[] args) {
 
-		JFrame JFrame = new JFrame("PrelimExam_Romero");
+		JFrame JFrame = new JFrame("Prelim");
 		JFrame.setBounds(5, 5, 800, 600);
 		JFrame.setResizable(true);
 		JFrame.setVisible(true);
