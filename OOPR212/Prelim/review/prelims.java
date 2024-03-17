@@ -1,3 +1,8 @@
+/*
+BUG: some components or all components may not show upon running
+
+FIX: maximize and then unmaximize window after compiling and running
+*/
 package OOPR212.Prelim.review;
 
 import javax.swing.*;
@@ -6,47 +11,47 @@ public class prelims {
 
 	public static void main(String[] args) {
 
-		JFrame frameRomero = new JFrame("PrelimExam_Romero");
-		frameRomero.setBounds(5, 5, 800, 600);
-		frameRomero.setResizable(true);
-		frameRomero.setVisible(true);
+		JFrame JFrame = new JFrame("PrelimExam_Romero");
+		JFrame.setBounds(5, 5, 800, 600);
+		JFrame.setResizable(true);
+		JFrame.setVisible(true);
 
-		JPanel panelRomero = new JPanel();
-		panelRomero.setLayout(null);
-		panelRomero.setBackground(Color.lightGray);
-		frameRomero.add(panelRomero);
+		JPanel JPanel = new JPanel();
+		JPanel.setLayout(null);
+		JPanel.setBackground(Color.lightGray);
+		JFrame.add(JPanel);
 
-		JLabel headerRomero = new JLabel("Registration Form");
-		headerRomero.setBounds(280, 30, 120, 20);
-		panelRomero.add(headerRomero);
+		JLabel Header = new JLabel("Registration Form");
+		Header.setBounds(280, 30, 120, 20);
+		JPanel.add(Header);
 
-		JLabel fnameLabelRomero = new JLabel("First Name");
-		fnameLabelRomero.setBounds(50, 80, 75, 20);
-		panelRomero.add(fnameLabelRomero);
+		JLabel fnameLabel = new JLabel("First Name");
+		fnameLabel.setBounds(50, 80, 75, 20);
+		JPanel.add(fnameLabel);
 
-		JTextField fnameTextRomero = new JTextField();
-		fnameTextRomero.setBounds(140, 80, 100, 20);
-		panelRomero.add(fnameTextRomero);
+		JTextField fnameText = new JTextField();
+		fnameText.setBounds(140, 80, 100, 20);
+		JPanel.add(fnameText);
 
-		JLabel lnameLabelRomero = new JLabel("Last Name");
-		lnameLabelRomero.setBounds(270, 80, 75, 20);
-		panelRomero.add(lnameLabelRomero);
+		JLabel lnameLabel = new JLabel("Last Name");
+		lnameLabel.setBounds(270, 80, 75, 20);
+		JPanel.add(lnameLabel);
 
-		JPasswordField lnameTextRomero = new JPasswordField();
-		lnameTextRomero.setBounds(360, 80, 100, 20);
-		panelRomero.add(lnameTextRomero);
+		JPasswordField lnameText = new JPasswordField();
+		lnameText.setBounds(360, 80, 100, 20);
+		JPanel.add(lnameText);
 
-		JLabel mnameLabelRomero = new JLabel("Middle Name");
-		mnameLabelRomero.setBounds(490, 80, 75, 20);
-		panelRomero.add(mnameLabelRomero);
+		JLabel mnameLabel = new JLabel("Middle Name");
+		mnameLabel.setBounds(490, 80, 75, 20);
+		JPanel.add(mnameLabel);
 
-		JTextField mnameTextRomero = new JTextField();
-		mnameTextRomero.setBounds(580, 80, 100, 20);
-		panelRomero.add(mnameTextRomero);
+		JTextField mnameText = new JTextField();
+		mnameText.setBounds(580, 80, 100, 20);
+		JPanel.add(mnameText);
 
 		JLabel gender = new JLabel("Gender");
 		gender.setBounds(50, 140, 100, 20);
-		panelRomero.add(gender);
+		JPanel.add(gender);
 
 		JRadioButton maleButton= new JRadioButton("Male");
 		JRadioButton femaleButton = new JRadioButton("Female");
@@ -57,43 +62,43 @@ public class prelims {
 
 		femaleButton.setBounds(120 ,140 ,100, 20);
 		maleButton.setBounds(230 ,140 ,100, 20);
-		panelRomero.add(femaleButton);
-		panelRomero.add(maleButton);
+		JPanel.add(femaleButton);
+		JPanel.add(maleButton);
 
-		JLabel ageLabelRomero = new JLabel("Age");
-		ageLabelRomero.setBounds(400 ,140, 50, 20);
-		panelRomero.add(ageLabelRomero);
+		JLabel ageLabel = new JLabel("Age");
+		ageLabel.setBounds(400 ,140, 50, 20);
+		JPanel.add(ageLabel);
 
-		JTextField ageTextRomero = new JTextField();
-		ageTextRomero.setBounds(450 ,140, 50, 20);
-		panelRomero.add(ageTextRomero);
+		JTextField ageText = new JTextField();
+		ageText.setBounds(450 ,140, 50, 20);
+		JPanel.add(ageText);
 
-		JLabel commentRomero = new JLabel("Comments");
-		commentRomero.setBounds(50, 200, 100, 20);
-		panelRomero.add(commentRomero);
+		JLabel comment = new JLabel("Comments");
+		comment.setBounds(50, 200, 100, 20);
+		JPanel.add(comment);
 
-		JTextArea commentBoxRomero = new JTextArea();
-		commentBoxRomero.setBounds(150, 200, 200, 200);
-		panelRomero.add(commentBoxRomero);
+		JTextArea commentBox = new JTextArea();
+		commentBox.setBounds(150, 200, 200, 200);
+		JPanel.add(commentBox);
 
-		JLabel comboLabelRomero = new JLabel("Campus");
-		comboLabelRomero.setBounds(380, 200, 75, 20);
-		panelRomero.add(comboLabelRomero);
+		JLabel comboLabel = new JLabel("Campus");
+		comboLabel.setBounds(380, 200, 75, 20);
+		JPanel.add(comboLabel);
 
-		JComboBox comboRomero = new JComboBox();
-		comboRomero.setBounds(445, 200, 75, 30);
-		comboRomero.addItem("Antipolo");
-		comboRomero.addItem("Valenzuela");
-		comboRomero.addItem("Quezon");
-		comboRomero.addItem("Pampanga");
-		panelRomero.add(comboRomero);
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(445, 200, 75, 30);
+		comboBox.addItem("Antipolo");
+		comboBox.addItem("Valenzuela");
+		comboBox.addItem("Quezon");
+		comboBox.addItem("Pampanga");
+		JPanel.add(comboBox);
 
-		JButton submitBtnRomero = new JButton("Submit");
-		submitBtnRomero.setBounds(240 ,440, 100, 50);
-		panelRomero.add(submitBtnRomero);
+		JButton submitBtn = new JButton("Submit");
+		submitBtn.setBounds(240 ,440, 100, 50);
+		JPanel.add(submitBtn);
 
-		JButton cancelBtnRomero = new JButton("Cancel");
-		cancelBtnRomero.setBounds(350 ,440, 100, 50);
-		panelRomero.add(cancelBtnRomero);
+		JButton cancelBtn = new JButton("Cancel");
+		cancelBtn.setBounds(350 ,440, 100, 50);
+		JPanel.add(cancelBtn);
 	}
 }

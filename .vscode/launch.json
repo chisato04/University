@@ -5,6 +5,13 @@
       "type": "java",
       "name": "prelims",
       "request": "launch",
+      "mainClass": "OOPR212.Prelim.review.prelims",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
+      "name": "prelims",
+      "request": "launch",
       "mainClass": "OOPR212.prelims",
       "projectName": "University_53d539c2"
     },
