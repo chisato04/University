@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "eventClass1",
+      "request": "launch",
+      "mainClass": "OOPR212.JavaSwingEventClasses.eventClass1",
+      "projectName": "University_53d539c2"
+    },
+    {
+      "type": "java",
       "name": "eventClass2",
       "request": "launch",
       "mainClass": "OOPR212.JavaSwingEventClasses.eventClass2",
