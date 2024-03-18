@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JLabel;
+package OOPR212.prelim.JLabel;
 
 import javax.swing.*;
 

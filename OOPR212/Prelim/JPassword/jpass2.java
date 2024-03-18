@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JPassword;
+package OOPR212.prelim.JPassword;
 
 import javax.swing.*;
 

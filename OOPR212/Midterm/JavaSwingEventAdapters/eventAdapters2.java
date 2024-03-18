@@ -1,4 +1,4 @@
-package OOPR212.Midterm.JavaSwingEventAdapters;
+package OOPR212.midterm.JavaSwingEventAdapters;
 
 import javax.swing.*;
 import java.awt.event.*;

@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JTField;
+package OOPR212.prelim.JTField;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;

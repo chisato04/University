@@ -1,4 +1,4 @@
-package OOPR212.Prelim.activity1;
+package OOPR212.prelim.activity1;
 import javax.swing.*;
 
 public class Activity1_Malinao extends JFrame{

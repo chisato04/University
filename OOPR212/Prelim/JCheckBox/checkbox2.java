@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JCheckBox;
+package OOPR212.prelim.JCheckBox;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

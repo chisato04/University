@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JPanel;
+package OOPR212.prelim.JPanel;
 import javax.swing.*;
 
 public class jpanel2 {

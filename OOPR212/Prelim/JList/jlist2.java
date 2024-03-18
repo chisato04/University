@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JList;
+package OOPR212.prelim.JList;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.*;

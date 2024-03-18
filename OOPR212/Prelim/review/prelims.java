@@ -3,7 +3,7 @@ BUG: some components or all components may not show upon running
 
 FIX: maximize and then unmaximize window after compiling and running
 */
-package OOPR212.Prelim.review;
+package OOPR212.prelim.review;
 
 import javax.swing.*;
 import java.awt.*;

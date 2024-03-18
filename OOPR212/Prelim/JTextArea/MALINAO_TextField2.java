@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JTextArea;
+package OOPR212.prelim.JTextArea;
 
 import javax.swing.*;
 import java.awt.*;

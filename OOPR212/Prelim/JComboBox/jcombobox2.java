@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JComboBox;
+package OOPR212.prelim.JComboBox;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;

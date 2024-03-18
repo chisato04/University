@@ -1,4 +1,4 @@
-package OOPR212.Prelim.activity1;
+package OOPR212.prelim.activity1;
 
 import java.awt.*;
 import javax.swing.JPanel;

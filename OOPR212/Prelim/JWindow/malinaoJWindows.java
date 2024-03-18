@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JWindow;
+package OOPR212.prelim.JWindow;
 import javax.swing.*;
 import javax.swing.JWindow;
 

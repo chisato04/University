@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JButton;
+package OOPR212.prelim.JButton;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,4 +1,4 @@
-package OOPR212.Prelim.JRadioButton;
+package OOPR212.prelim.JRadioButton;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
