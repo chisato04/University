@@ -1,3 +1,4 @@
+package arithmethicOperators;
 import java.util.Scanner;
 
 public class deductThenMulitply
